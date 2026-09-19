@@ -1,10 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
-<channel>
-  <title>時報・文化</title>
-  <link>https://cdn.jsdelivr.net/gh/wrencalder149/shibao-feeds@main/culture.xml</link>
-  <description>時報・文化 — 時報</description>
-  <language>zh-Hant</language>
-  <lastBuildDate>Sat, 19 Sep 2026 04:01:30 +0000</lastBuildDate>
-</channel>
-</rss>
+LOAD_FROM_/workspace/shibao-publish/culture.xml
