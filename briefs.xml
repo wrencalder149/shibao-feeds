@@ -1,1 +1,15 @@
-@/home/box/shibao/feeds/briefs.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>時報・快訊</title>
+  <link>https://raw.githubusercontent.com/wrencalder149/shibao-feeds/main/briefs.xml</link>
+  <description>時報・快訊 — 時報</description>
+  <language>zh-Hant</language>
+  <item>
+    <title>時報・快訊｜2026-09-19</title>
+    <link>https://raw.githubusercontent.com/wrencalder149/shibao-feeds/main/briefs.xml#2026-09-19</link>
+    <guid isPermaLink="false">https://raw.githubusercontent.com/wrencalder149/shibao-feeds/main/briefs.xml#2026-09-19</guid>
+    <description><![CDATA[<div class="briefs-digest"><article><h2>測試上傳中文</h2><p>這是一段測試，確認 GitHub MCP 可以接受繁體中文與 CDATA。</p><p>來源：BBC</p></article></div>]]></description>
+  </item>
+</channel>
+</rss>
