@@ -1,1 +1,18 @@
-PLACEHOLDER
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>時報・快訊</title>
+  <link>https://cdn.jsdelivr.net/gh/wrencalder149/shibao-feeds@main/briefs.xml</link>
+  <description>時報・快訊 — 時報</description>
+  <language>zh-Hant</language>
+  <lastBuildDate>Tue, 22 Sep 2026 00:37:05 +0000</lastBuildDate>
+  <item>
+    <title>時報・快訊｜2026-09-22</title>
+    <link>https://cdn.jsdelivr.net/gh/wrencalder149/shibao-feeds@main/briefs.xml#7733e177d0af</link>
+    <guid isPermaLink="false">briefs-2026-09-22</guid>
+    <pubDate>Tue, 22 Sep 2026 00:10:00 +0000</pubDate>
+    <category>快訊</category><category>日刊</category><category>東亞</category><category>歐洲</category><category>美洲</category><category>非洲</category><category>中東</category><category>南亞</category>
+    <description><![CDATA[CONTENT_PLACEHOLDER_REPLACE]]></description>
+  </item>
+</channel>
+</rss>
