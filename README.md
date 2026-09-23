@@ -9,6 +9,8 @@
 - 文化（全文繁中，4–5 則）  
   https://cdn.jsdelivr.net/gh/wrencalder149/shibao-feeds@main/culture.xml
 
-**請勿再使用舊的薄稿／raw.githubusercontent.com 快取連結。** 若閱讀器仍顯示舊內容，改訂上方 jsDelivr 網址並強制刷新。
+**分享／TTS 請開各則連結（HTML 全文頁）**，路徑為 `html/{channel}/{slug}.html`；**訂閱仍用上方三個 xml**。
+
+**請勿再使用舊的薄稿／raw.githubusercontent.com 快取連結，也勿依賴 xml#slug 當分享頁。** 若閱讀器仍顯示舊內容，改訂上方 jsDelivr 網址並強制刷新。
 
 最後更新：2026-09-23（Asia/Taipei）
