@@ -10,3 +10,5 @@
   https://cdn.jsdelivr.net/gh/wrencalder149/shibao-feeds@main/culture.xml
 
 **請勿再使用舊的薄稿／raw.githubusercontent.com 快取連結。** 若閱讀器仍顯示舊內容，改訂上方 jsDelivr 網址並強制刷新。
+
+最後更新：2026-09-23（Asia/Taipei）
