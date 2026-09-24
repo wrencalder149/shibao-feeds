@@ -1,0 +1,24 @@
+name: decode-nb-srt
+on:
+  workflow_dispatch:
+  push:
+    paths: ['tmp-srt/_encoded/nb.srt.gz.b64']
+permissions:
+  contents: write
+jobs:
+  decode:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          python3 - <<'PY'
+          import base64, gzip, pathlib
+          b64 = pathlib.Path("tmp-srt/_encoded/nb.srt.gz.b64").read_text().strip()
+          raw = gzip.decompress(base64.b64decode(b64))
+          pathlib.Path("tmp-srt/The.Notebook.2002.tw.srt").write_bytes(raw)
+          print(len(raw))
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tmp-srt/The.Notebook.2002.tw.srt
+          git diff --cached --quiet || (git commit -m "chore: decode The.Notebook.2002.tw.srt" && git push)
