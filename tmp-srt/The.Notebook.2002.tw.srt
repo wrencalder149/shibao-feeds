@@ -1,1 +1,1 @@
-@/workspace/nb_push_files_arguments.json
+PLACEHOLDER_REPLACE_FROM_FILE
