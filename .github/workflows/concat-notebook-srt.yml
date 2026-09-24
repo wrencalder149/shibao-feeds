@@ -1,0 +1,27 @@
+name: concat-notebook-srt
+on:
+  push:
+    paths:
+      - 'tmp-srt/parts/notebook.*.txt'
+      - '.github/workflows/concat-notebook-srt.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  concat:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Concat parts
+        run: |
+          mkdir -p tmp-srt
+          cat tmp-srt/parts/notebook.*.txt > "tmp-srt/The.Notebook.惡童日記.2002.srt"
+          wc -c "tmp-srt/The.Notebook.惡童日記.2002.srt"
+          sha1sum "tmp-srt/The.Notebook.惡童日記.2002.srt"
+      - name: Commit result
+        run: |
+          git config user.name "srt-bot"
+          git config user.email "srt-bot@users.noreply.github.com"
+          git add "tmp-srt/The.Notebook.惡童日記.2002.srt"
+          git diff --cached --quiet || git commit -m "chore: concat Notebook TW SRT parts"
+          git push
