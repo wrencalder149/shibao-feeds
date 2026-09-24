@@ -1,0 +1,38 @@
+name: fix-sotv-parts
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          # part03: wrongly has npz where Us should be
+          p = Path("tmp-srt/_encoded/sotv.part03.b64")
+          t = p.read_text()
+          bad = "By0" + chr(110) + chr(112) + chr(122) + "OKp"
+          good = "By0" + chr(85) + chr(115) + "OKp"
+          if bad in t:
+              t = t.replace(bad, good, 1)
+              p.write_text(t)
+              print("part03 fixed", len(t))
+          else:
+              print("part03 already ok", len(t))
+          # apply any pending hex parts
+          import binascii
+          for i in range(8):
+              hx = Path(f"tmp-srt/_encoded/sotv.part{i:02d}.hex")
+              out = Path(f"tmp-srt/_encoded/sotv.part{i:02d}.b64")
+              if hx.exists():
+                  raw = binascii.unhexlify(hx.read_text().strip())
+                  out.write_bytes(raw)
+                  print("hex->b64", i, len(raw))
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tmp-srt/_encoded/
+          git diff --cached --quiet || (git commit -m "fix: restore sotv parts from hex / Us fix" && git push)
