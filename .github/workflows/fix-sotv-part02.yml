@@ -1,0 +1,28 @@
+name: fix-sotv-part02
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path("tmp-srt/_encoded/sotv.part02.b64")
+          t = p.read_text()
+          bad = "Tensorflow"
+          good = chr(110) + chr(112) + chr(122)
+          if bad in t:
+              t = t.replace(bad, good)
+              p.write_text(t)
+              print("fixed", len(t))
+          else:
+              print("already ok", len(t), "has_good", good in t)
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tmp-srt/_encoded/sotv.part02.b64
+          git diff --cached --quiet || (git commit -m "fix: sotv.part02.b64 restore npz" && git push)
