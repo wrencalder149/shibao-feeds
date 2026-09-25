@@ -13,4 +13,4 @@
 
 **請勿再使用舊的薄稿／raw.githubusercontent.com 快取連結，也勿依賴 xml#slug 當分享頁。** 若閱讀器仍顯示舊內容，改訂上方 jsDelivr 網址並強制刷新。
 
-最後更新：2026-09-23（Asia/Taipei）
+最後更新：2026-09-25（Asia/Taipei）
