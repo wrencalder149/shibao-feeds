@@ -2,6 +2,8 @@
 
 在 RSS 閱讀器「加入訂閱」，整段貼上（建議用 jsDelivr，較少舊快取）：
 
+- 晨衡日報（時事，全文在每一則裡）  
+  https://cdn.jsdelivr.net/gh/wrencalder149/shibao-feeds@main/heng.xml
 - 快訊（當日一則／內含 13–16 篇短文）  
   https://cdn.jsdelivr.net/gh/wrencalder149/shibao-feeds@main/briefs.xml
 - 深度（全文繁中，4–5 則）  
@@ -13,4 +15,4 @@
 
 **請勿再使用舊的薄稿／raw.githubusercontent.com 快取連結，也勿依賴 xml#slug 當分享頁。** 若閱讀器仍顯示舊內容，改訂上方 jsDelivr 網址並強制刷新。
 
-最後更新：2026-09-25（Asia/Taipei）
+最後更新：2026-10-01（Asia/Taipei）
